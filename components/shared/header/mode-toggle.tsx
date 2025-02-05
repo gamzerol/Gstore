@@ -4,7 +4,7 @@ import { DropdownMenu } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon, SunMoon } from "lucide-react";
-import { DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
+import { DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 import { useState, useEffect } from "react";
 
@@ -31,7 +31,7 @@ const ModeToggle = () => {
           ) }
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="cursor-pointer focus-visible:ring-0 focus-visible:ring-offset-0">
+      <DropdownMenuContent className="cursor-pointer focus-visible:ring-0 focus-visible:ring-offset-0" align="end">
         <DropdownMenuLabel>Appearance</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuCheckboxItem checked={theme === 'system'} onClick={() => setTheme('system')}>
